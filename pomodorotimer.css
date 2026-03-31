@@ -1,0 +1,138 @@
+.container {
+    /* Removed margin: auto and display: flex from here
+       as the parent div now handles the centering */
+    width: 400px;
+    height: 400px;
+    background-color: #00003D;
+    padding: 50px 20px;
+    border-radius: 15px;
+    font-family: "Roboto", sans-serif;
+
+    /* Keep these to align the items INSIDE the timer */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer-container {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.timer-container button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #f3486d;
+    cursor: pointer;
+}
+/*.timer-container button: hover {
+    transform: scale(1.2);
+}*/
+.timer-container .active {
+    background-color: #db2a34;
+}
+
+#longbrkbtn {
+    display: none;
+}
+.pomdoro-count {
+    margin-bottom: 20px;
+    display: none;
+    font-weight: 800;
+}
+.function-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+}
+/*.function-buttons button: hover {
+    transform: scale(1.2);
+}*/
+
+#startbtn,
+#pausebtn,
+#resetbtn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+    color: #ffffff;
+    font-weight: bold;
+    background-color: #f3486d;
+    cursor: pointer;
+}
+#startbtn {
+    background-color: #008000;
+}
+#pausebtn {
+    background-color: #db2a34;
+}
+#resetbtn {
+    background-color: #ffa600;
+}
+.progressbar {
+    height: 180px;
+    width: 180px;
+    flex-shrink: 0;
+    background: conic-gradient(crimson 0deg, rgb(243, 72, 109)
+    0deg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 3s infinite;
+    transition: all ease;
+    margin-bottom: 50px;
+}
+.progrsbar-inner {
+    height: 90%;
+    width: 90%;
+    background:#03033f;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.progressbar-number {
+    color: #ffffff;
+    font-weight: 900;
+    font-size: 2rem;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(0.97);
+    }
+    50% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.97);
+    }
+}
+
+.music-card {
+    background: white;
+    padding: 20px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    width: 350px;
+    border: 1px solid #e0f6fc;
+}
+
+.music-title {
+    font-family: 'Permanent Marker', cursive; /* Using your post-it font */
+    color: #293241;
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    text-align: center;
+}
